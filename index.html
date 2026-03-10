@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Dannys Gas Shop - Home</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1d4fd7",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111521",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 mb-20">
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-40 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="flex items-center justify-between px-4 py-3 max-w-md mx-auto">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-3xl">local_gas_station</span>
+                <h1 class="text-xl font-black tracking-tight">Dannys Gas Shop</h1>
+            </div>
+            <button id="theme-toggle"
+                class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+                <span id="theme-icon"
+                    class="material-symbols-outlined text-slate-600 dark:text-slate-400">dark_mode</span>
+            </button>
+        </div>
+    </header>
+    <main class="max-w-md mx-auto overflow-x-hidden">
+        <!-- Hero Section -->
+        <section class="px-4 py-8">
+            <div class="relative w-full h-64 rounded-xl overflow-hidden mb-6 bg-slate-200 dark:bg-slate-800"
+                data-alt="Professional gas cylinder delivery truck in city"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7f0W6SjTtbvWU_a-FNhC7cM9eGC0IQHiQ0wCOIApWbHw5Ha6tneCUDFuOrKRBYksC9v6C3SP450XISgXwU4WzR2Qobb2DFgpy67qFvZ5FEhJVfov6qi_0eaJZn_xiEXMNer0spSwmV4j7S2fCTLZzA7lMQcGKBnbrOWid9nHwyUoaHSkK-qSpp_h3ieWRAd20SKv3_lQ_TC6ZbNYigGp-U2sWoXVb1X-zHtLUjZ-xkrH3XDxbvwmXtRJzZUWtzE8MJJVu8h9iQ3s"); background-size: cover; background-position: center;'>
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
+                    <h1 class="text-white text-3xl font-black leading-tight mb-2">Dannys Gas Shop</h1>
+                    <p class="text-white/90 text-sm font-medium">Fast Gas Delivery &amp; Refill Services Near You.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+                <a href="https://wa.me/254112208191?text=Hello%20Dannys%20Gas%20Shop,%20I%20want%20to%20order%20gas."
+                    target="_blank"
+                    class="bg-primary text-white py-4 rounded-xl font-bold flex flex-col items-center gap-1 shadow-lg shadow-primary/20 text-center">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                    Order Gas
+                </a>
+                <a href="#refill-form"
+                    class="bg-white dark:bg-slate-800 text-primary border-2 border-primary/10 py-4 rounded-xl font-bold flex flex-col items-center gap-1 text-center">
+                    <span class="material-symbols-outlined text-primary">autorenew</span>
+                    Request Refill
+                </a>
+            </div>
+        </section>
+        <!-- How It Works -->
+        <section class="px-4 py-6 bg-primary/5 dark:bg-primary/10">
+            <h2 class="text-xl font-bold mb-6">How It Works</h2>
+            <div class="grid grid-cols-3 gap-2">
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mb-3">
+                        <span class="material-symbols-outlined">touch_app</span>
+                    </div>
+                    <p class="text-xs font-bold uppercase tracking-wider text-primary mb-1">Step 1</p>
+                    <p class="text-sm font-medium">Choose Product</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center mb-3">
+                        <span class="material-symbols-outlined">chat</span>
+                    </div>
+                    <p class="text-xs font-bold uppercase tracking-wider text-[#25D366] mb-1">Step 2</p>
+                    <p class="text-sm font-medium">Order via WA</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mb-3">
+                        <span class="material-symbols-outlined">local_shipping</span>
+                    </div>
+                    <p class="text-xs font-bold uppercase tracking-wider text-primary mb-1">Step 3</p>
+                    <p class="text-sm font-medium">Fast Delivery</p>
+                </div>
+            </div>
+        </section>
+        <!-- Gas Cylinders -->
+        <section class="px-4 py-8">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-xl font-bold">Gas Cylinders</h2>
+            </div>
+            <div class="grid grid-cols-1 gap-4">
+                <!-- 6kg Card -->
+                <div
+                    class="bg-white dark:bg-slate-800 p-3 rounded-xl flex gap-4 border border-slate-100 dark:border-slate-700 shadow-sm">
+                    <div class="w-28 h-28 rounded-lg bg-slate-100 dark:bg-slate-700 shrink-0"
+                        data-alt="Small 6kg blue gas cylinder"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUKWk7ht1XWr0ce8aUti8Co5VFzrSuC7VOTvSqDo54qGX2udHAdTq0sWdukGEsh7KIsFqeq8YvvPjat_k0UfL9CcsUMSot09bj2Bun3iVJC-uVpaSErNPOvnmfwIdJ-bs-sPyN9UBhpiU3su-jyQ9QczhYTmmFKpRay-GlHUv1kjKMSaxi0XNU1-rvWPMbqTqK0KzIMkgJ5PXaEX8DG4gPW2aut0LxUTwBZ7tqBjBpKoWTUi5X9qbzMjzIAqp07ayPaxxqvf8MhYU"); background-size: cover; background-position: center;'>
+                    </div>
+                    <div class="flex flex-col justify-between flex-1">
+                        <div>
+                            <h3 class="font-bold text-lg">6kg Cylinder</h3>
+                            <p class="text-primary font-bold">Ksh 1,200</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-2">
+                            <div class="flex items-center bg-slate-100 dark:bg-slate-700 rounded-lg p-1">
+                                <button type="button" class="w-8 h-8 flex items-center justify-center text-slate-500"
+                                    onclick="updateQty('qty-6kg', -1)"><span
+                                        class="material-symbols-outlined text-sm">remove</span></button>
+                                <span id="qty-6kg" class="px-2 font-bold text-sm">1</span>
+                                <button type="button" class="w-8 h-8 flex items-center justify-center text-slate-500"
+                                    onclick="updateQty('qty-6kg', 1)"><span
+                                        class="material-symbols-outlined text-sm">add</span></button>
+                            </div>
+                            <button onclick="orderItem('6kg Cylinder', 'qty-6kg')"
+                                class="bg-[#25D366] hover:bg-[#1fad53] text-white px-4 py-2 rounded-lg flex items-center gap-1 font-bold text-sm">
+                                Order
+                                <span class="material-symbols-outlined text-sm">chat</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 13kg Card -->
+                <div
+                    class="bg-white dark:bg-slate-800 p-3 rounded-xl flex gap-4 border border-slate-100 dark:border-slate-700 shadow-sm">
+                    <div class="w-28 h-28 rounded-lg bg-slate-100 dark:bg-slate-700 shrink-0"
+                        data-alt="Standard 13kg orange gas cylinder"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7d7G6kxEK2Sg0F3TX2wsE_ZNE8GB4TevU76yLDgZyysQFGCx62qlZ_kIJHshbL-MASaoIlvFbd05r5kLjZbaTu1QJdBxWUDu_OQJuEeHFS_7vtaylNdkOlcSX0kcuMfWWln5CgaX_v02g3Epb5TQFGBBapyVRHAOqdS58yLNVrTjj5fQ4Y0TLxsILQF3VDvKTfxj_5uA8A6-kDABEqUTZ78RX63t-wp0y6Dsxo8brDB6bSK0nFQhQTZeRdtRo9gCdzMeRFctgwCM"); background-size: cover; background-position: center;'>
+                    </div>
+                    <div class="flex flex-col justify-between flex-1">
+                        <div>
+                            <h3 class="font-bold text-lg">13kg Cylinder</h3>
+                            <p class="text-primary font-bold">Ksh 2,500</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-2">
+                            <div class="flex items-center bg-slate-100 dark:bg-slate-700 rounded-lg p-1">
+                                <button type="button" class="w-8 h-8 flex items-center justify-center text-slate-500"
+                                    onclick="updateQty('qty-13kg', -1)"><span
+                                        class="material-symbols-outlined text-sm">remove</span></button>
+                                <span id="qty-13kg" class="px-2 font-bold text-sm">1</span>
+                                <button type="button" class="w-8 h-8 flex items-center justify-center text-slate-500"
+                                    onclick="updateQty('qty-13kg', 1)"><span
+                                        class="material-symbols-outlined text-sm">add</span></button>
+                            </div>
+                            <button onclick="orderItem('13kg Cylinder', 'qty-13kg')"
+                                class="bg-[#25D366] hover:bg-[#1fad53] text-white px-4 py-2 rounded-lg flex items-center gap-1 font-bold text-sm">
+                                Order
+                                <span class="material-symbols-outlined text-sm">chat</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 50kg Card -->
+                <div
+                    class="bg-white dark:bg-slate-800 p-3 rounded-xl flex gap-4 border border-slate-100 dark:border-slate-700 shadow-sm">
+                    <div class="w-28 h-28 rounded-lg bg-slate-100 dark:bg-slate-700 shrink-0"
+                        data-alt="Large 50kg industrial gas cylinder"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBacCLuH65niC94KtMZyM3doRDEUYDeO6cQEqVMXcgn0Y3pqwbW05vq9t8R0XPzrOy9aDnCEQlJ9g-SSb-dOs3ZuMR-FRo1mcz9bIMl362XtGSlDZTsLqCFg4cQuB3ALbfkmskPs3J38cBcfY41U8YNmwdeYTEsdlhQ9tsY3C6TVU3gYeinlaeQWj5DXqbRnxhipLBiwr2lb1TNT-EgSzx1bEQWgVnFqUtPlXBm2u9qmOtrmzx-T5r31KpQVvkda89I8uDnA5IG3HU"); background-size: cover; background-position: center;'>
+                    </div>
+                    <div class="flex flex-col justify-between flex-1">
+                        <div>
+                            <h3 class="font-bold text-lg">50kg Cylinder</h3>
+                            <p class="text-primary font-bold">Ksh 8,000</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-2">
+                            <div class="flex items-center bg-slate-100 dark:bg-slate-700 rounded-lg p-1">
+                                <button type="button" class="w-8 h-8 flex items-center justify-center text-slate-500"
+                                    onclick="updateQty('qty-50kg', -1)"><span
+                                        class="material-symbols-outlined text-sm">remove</span></button>
+                                <span id="qty-50kg" class="px-2 font-bold text-sm">1</span>
+                                <button type="button" class="w-8 h-8 flex items-center justify-center text-slate-500"
+                                    onclick="updateQty('qty-50kg', 1)"><span
+                                        class="material-symbols-outlined text-sm">add</span></button>
+                            </div>
+                            <button onclick="orderItem('50kg Cylinder', 'qty-50kg')"
+                                class="bg-[#25D366] hover:bg-[#1fad53] text-white px-4 py-2 rounded-lg flex items-center gap-1 font-bold text-sm">
+                                Order
+                                <span class="material-symbols-outlined text-sm">chat</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Gas Accessories -->
+        <section class="px-4 py-4">
+            <h2 class="text-xl font-bold mb-4">Gas Accessories</h2>
+            <div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar">
+                <div
+                    class="min-w-[160px] bg-white dark:bg-slate-800 rounded-xl p-3 border border-slate-100 dark:border-slate-700 block">
+                    <div class="w-full aspect-square bg-slate-100 dark:bg-slate-700 rounded-lg mb-3"
+                        data-alt="Gas regulator for cylinders"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBlDyCDvyNStmY4YTwIhfyt_NT2T522GLvI7xHX-8WAFm-8JJne6PqahxJu9RiE8GVH2YC7atpD8GZ3iUs85FhPmYt8hmeSVb8SX-CBs4SgeNUosuiX9yJmpCcywgsUEIlxpPpSvS254aFZeuexsc8bUPt8XIikKjUMbT-j0vm_WkSVEcCWNArKZSKkHT1cuL6yafRrs18MFXMXmZ_CQwUC-0DKEqob454-5co3k8U2uqNBoxxCkUFU_LOeDzQ7Moqvi-SDR7tgO7o"); background-size: cover; background-position: center;'>
+                    </div>
+                    <h3 class="font-bold text-sm">Gas Regulator</h3>
+                    <p class="text-primary text-xs font-bold mb-2">Ksh 850</p>
+                    <button type="button" onclick="orderSimple('Gas Regulator')"
+                        class="w-full bg-[#25D366] hover:bg-[#1fad53] text-white py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1">Order
+                        <span class="material-symbols-outlined text-[14px]">chat</span></button>
+                </div>
+                <div
+                    class="min-w-[160px] bg-white dark:bg-slate-800 rounded-xl p-3 border border-slate-100 dark:border-slate-700 block">
+                    <div class="w-full aspect-square bg-slate-100 dark:bg-slate-700 rounded-lg mb-3"
+                        data-alt="Gas delivery hose pipe"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCBB-I2EPUFgGZCL40ykoXz9sKs4eZafQJ1P25OJu52stOldzvWaDRPZ8V4qsvXWqaR1Adusg6wCPzKVrmh99mL-G9Zt8wWNE6jXpgx5yIHX0gEYeXIMptw0E8MUC4_jslbxpc6TS2NQR5mWFH_qSMR5suKkCl3yLPpgVbcf6274qpge07p71py12nXTxq8zoncsb2fAL3aQOYFQLdyXpRenWfP_v8Nnw6f3YAbFqbbjStwIwBSylwwbm2hYJ5BCY2RIqYI_nXNID4"); background-size: cover; background-position: center;'>
+                    </div>
+                    <h3 class="font-bold text-sm">Pipes/Hoses</h3>
+                    <p class="text-primary text-xs font-bold mb-2">Ksh 300/m</p>
+                    <button type="button" onclick="orderSimple('Pipes/Hoses')"
+                        class="w-full bg-[#25D366] hover:bg-[#1fad53] text-white py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1">Order
+                        <span class="material-symbols-outlined text-[14px]">chat</span></button>
+                </div>
+                <div
+                    class="min-w-[160px] bg-white dark:bg-slate-800 rounded-xl p-3 border border-slate-100 dark:border-slate-700 block">
+                    <div class="w-full aspect-square bg-slate-100 dark:bg-slate-700 rounded-lg mb-3"
+                        data-alt="Metal stand for gas cylinders"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBEZ31thbJDonIsTunHAybXPGj4JDfmF0pPp0tgEbFbd-yZiZvVnLvoZuCdEXF3Wdk0RyV6BncZZDhyoBZOkO2n5zdWzEsfORWE-gz2cGj81SFUwuOvkdNL9gW44IOMHUY-U_XKQQaP6gdpqnVrEMtvFOc0jzpk1J_mMiZ00Pw9VnQQisksMNHFhfigbDaJYF9hxdPebYR6dUWeiBYYssQqTZ_c-7_IvcNtG_ESTToYH5o2lybQJJjFMihHwQ95d5A3tcBw-6NvsOw"); background-size: cover; background-position: center;'>
+                    </div>
+                    <h3 class="font-bold text-sm">Cylinder Stand</h3>
+                    <p class="text-primary text-xs font-bold mb-2">Ksh 1,500</p>
+                    <button type="button" onclick="orderSimple('Cylinder Stand')"
+                        class="w-full bg-[#25D366] hover:bg-[#1fad53] text-white py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1">Order
+                        <span class="material-symbols-outlined text-[14px]">chat</span></button>
+                </div>
+            </div>
+        </section>
+        <!-- Gas Cookers -->
+        <section class="px-4 py-4">
+            <h2 class="text-xl font-bold mb-4">Gas Cookers</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div
+                    class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 flex flex-col">
+                    <div class="w-full flex-1 min-h-[128px] bg-slate-100" data-alt="Single burner tabletop gas cooker"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7rWMuji7JE4NJT6a4HZHhmalxbYP8UqJY_DG8YxAWPE79jPMv2sKOVavR0fvLzsxyEyfB2zXcZbO8kT8jhPkk9wtLR6_FyWxxVI25N33svIbM6TGoofLIJslwi4uLNg4JVHr65N1NOVLW92ULRxntGQB2KFuvoPmi9owvp8NOwc9MdY08M8Yp03b06KMtCCo7WsLpfYYTkAEtSrsw1rSGrNjSfvJLVP-_5tqJ05cE0Bwyw2g6SYmSq3y9pObtAZ6ynrMsiiT-8KI"); background-size: cover; background-position: center;'>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="font-bold text-sm truncate">Single Burner</h3>
+                        <p class="text-primary font-bold text-sm mb-2">Ksh 1,800</p>
+                        <button type="button" onclick="orderSimple('Single Burner')"
+                            class="w-full bg-[#25D366] hover:bg-[#1fad53] text-white py-1.5 rounded-lg text-xs font-bold flex items-center justify-center gap-1">Order
+                            <span class="material-symbols-outlined text-[14px]">chat</span></button>
+                    </div>
+                </div>
+                <div
+                    class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 flex flex-col">
+                    <div class="w-full flex-1 min-h-[128px] bg-slate-100" data-alt="Double burner tabletop gas cooker"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHbztAl1f1ljui2KOAWgNI68aQPKxiGPTdVA3mB9Hm0QQ7V7HmM3QNfzzgyuSyPCE1julhE9hwE4vlHTxt6Mx9I9cUP6tMtM4ZOMMHXMGvrdSB9oUCXZnNScA48RHzEv57Vtq-PlnO3CQl17DNMrRjq9sb9llIIMZ47s7I7awIxjdHOJRojLyEPSe3RxjQH-HLM5r4yyWW_bxjAf2kj0c-kC2220NkG9gjDJAeCScr8zVcWrK7pL_qu6-k5pmro2G4Oj6tT0g3fVU"); background-size: cover; background-position: center;'>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="font-bold text-sm truncate">Double Burner</h3>
+                        <p class="text-primary font-bold text-sm mb-2">Ksh 3,500</p>
+                        <button type="button" onclick="orderSimple('Double Burner')"
+                            class="w-full bg-[#25D366] hover:bg-[#1fad53] text-white py-1.5 rounded-lg text-xs font-bold flex items-center justify-center gap-1">Order
+                            <span class="material-symbols-outlined text-[14px]">chat</span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Refill Form -->
+        <section id="refill-form" class="px-4 py-8">
+            <div
+                class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+                <h2 class="text-2xl font-black mb-1">Quick Refill</h2>
+                <p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Fill the form and we'll come to you!</p>
+                <form class="space-y-4" onsubmit="submitRefill(event)">
+                    <div>
+                        <label class="block text-sm font-bold mb-1 text-slate-700 dark:text-slate-300">Your Name</label>
+                        <input id="refill-name"
+                            class="w-full bg-slate-50 dark:bg-slate-900 border-none rounded-xl focus:ring-2 focus:ring-primary py-3"
+                            placeholder="Danny Doe" type="text" required />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-1 text-slate-700 dark:text-slate-300">Phone
+                            Number</label>
+                        <input id="refill-phone"
+                            class="w-full bg-slate-50 dark:bg-slate-900 border-none rounded-xl focus:ring-2 focus:ring-primary py-3"
+                            placeholder="0712 345 678" type="tel" required />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-1 text-slate-700 dark:text-slate-300">Delivery
+                            Location</label>
+                        <input id="refill-location"
+                            class="w-full bg-slate-50 dark:bg-slate-900 border-none rounded-xl focus:ring-2 focus:ring-primary py-3"
+                            placeholder="Apartment, Street, Area" type="text" required />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-1 text-slate-700 dark:text-slate-300">Cylinder
+                            Size</label>
+                        <select id="refill-size"
+                            class="w-full bg-slate-50 dark:bg-slate-900 border-none rounded-xl focus:ring-2 focus:ring-primary py-3">
+                            <option value="6kg">6kg Refill</option>
+                            <option value="13kg">13kg Refill</option>
+                            <option value="50kg">50kg Refill</option>
+                        </select>
+                    </div>
+                    <button
+                        class="w-full bg-primary hover:bg-[#183cbd] text-white py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/20 mt-2 flex items-center justify-center gap-2"
+                        type="submit">Submit Request <span class="material-symbols-outlined">send</span></button>
+                </form>
+            </div>
+        </section>
+        <!-- Contact & Map -->
+        <section class="px-4 py-8">
+            <h2 class="text-xl font-bold mb-4">Visit Us</h2>
+            <div class="space-y-4">
+                <a href="tel:+254112208191"
+                    class="flex items-center gap-3 w-full bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
+                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined">call</span>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-500 uppercase font-bold">Call Now</p>
+                        <p class="font-bold">+254 112 208 191</p>
+                    </div>
+                </a>
+                <div class="w-full h-48 rounded-2xl bg-slate-200 dark:bg-slate-800 overflow-hidden relative border border-slate-100 dark:border-slate-700"
+                    data-location="Nairobi, Kenya">
+                    <div class="absolute inset-0 flex items-center justify-center bg-slate-300 dark:bg-slate-700/50">
+                        <span class="material-symbols-outlined text-4xl text-slate-400">map</span>
+                        <span class="ml-2 font-medium text-slate-500">View Map Location</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer
+            class="bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 py-10 px-4 text-center text-slate-500 shadow-inner">
+            <div class="mb-6 space-y-2 text-sm">
+                <h3 class="text-xl font-black text-slate-900 dark:text-slate-100 mb-2">Dannys Gas Shop</h3>
+                <p>Delivery Hours: Mon-Sun, 6 AM - 10 PM</p>
+                <p>Contact: +254 112 208 191</p>
+            </div>
+            <div
+                class="flex justify-center gap-6 text-xs font-bold border-t border-slate-100 dark:border-slate-700 pt-6">
+                <a href="#" class="hover:text-primary transition-colors uppercase tracking-wider">Home</a>
+                <a href="#refill-form" class="hover:text-primary transition-colors uppercase tracking-wider">Refill</a>
+                <a href="https://wa.me/254112208191" target="_blank"
+                    class="hover:text-primary transition-colors uppercase tracking-wider">Contact</a>
+            </div>
+        </footer>
+    </main>
+    <!-- Floating WhatsApp -->
+    <a class="fixed bottom-6 right-4 w-14 h-14 bg-[#10b981] hover:bg-[#0ea5e9] text-white rounded-full flex items-center justify-center shadow-xl z-50 border-4 border-white dark:border-background-dark transition-colors duration-300"
+        href="https://wa.me/254112208191?text=Hello%20Dannys%20Gas%20Shop%2C%20I%20have%20an%20inquiry."
+        target="_blank">
+        <span class="material-symbols-outlined text-3xl">chat</span>
+    </a>
+
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <script>
+        const waNumber = "254112208191";
+
+        function updateQty(id, change) {
+            const el = document.getElementById(id);
+            let qty = parseInt(el.innerText);
+            qty += change;
+            if (qty < 1) qty = 1;
+            el.innerText = qty;
+        }
+
+        function orderItem(itemName, qtyId) {
+            const qty = document.getElementById(qtyId).innerText;
+            const message = `Hello Dannys Gas Shop, I want to order ${qty}x ${itemName}.`;
+            const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
+            window.open(waLink, '_blank');
+        }
+
+        function orderSimple(itemName) {
+            const message = `Hello Dannys Gas Shop, I want to order a ${itemName}.`;
+            const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
+            window.open(waLink, '_blank');
+        }
+
+        function submitRefill(event) {
+            event.preventDefault();
+            const name = document.getElementById('refill-name').value;
+            const phone = document.getElementById('refill-phone').value;
+            const location = document.getElementById('refill-location').value;
+            const size = document.getElementById('refill-size').value;
+
+            const message = `*New Refill Request*\nName: ${name}\nPhone: ${phone}\nLocation: ${location}\nSize: ${size} cylinder\n\nPlease confirm!`;
+            const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
+            window.open(waLink, '_blank');
+        }
+
+        // Dark Mode Toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark')) {
+                themeIcon.textContent = 'light_mode';
+            } else {
+                themeIcon.textContent = 'dark_mode';
+            }
+        }
+
+        // Initialize Icon
+        updateIcon();
+
+        themeToggleBtn.addEventListener('click', function () {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+            updateIcon();
+        });
+    </script>
+</body>
+
+</html>

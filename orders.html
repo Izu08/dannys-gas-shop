@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danny's Gas - My Orders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #f8f6f6;
+        }
+
+        .active-nav {
+            color: #ec5b13;
+        }
+    </style>
+</head>
+
+<body class="pb-20">
+    <!-- Header -->
+    <header class="p-4 flex gap-4 items-center bg-white sticky top-0 z-10 shadow-sm">
+        <a href="index.html" class="material-symbols-outlined text-slate-400">arrow_back</a>
+        <h1 class="font-black text-xl">My Orders</h1>
+    </header>
+
+    <!-- In Progress Order -->
+    <section class="m-4">
+        <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">In Progress</h2>
+        <div class="p-5 rounded-2xl bg-white shadow-sm border border-slate-100 flex flex-col gap-4">
+            <div class="flex justify-between items-center">
+                <p class="font-bold text-lg">Order #GAS-7742</p>
+                <span class="text-[10px] font-bold text-[#ec5b13] bg-orange-50 px-3 py-1 rounded-full">OUT FOR
+                    DELIVERY</span>
+            </div>
+            <div class="relative h-1 bg-slate-100 rounded-full overflow-hidden">
+                <div class="absolute inset-y-0 left-0 bg-[#ec5b13]" style="width: 75%;"></div>
+            </div>
+            <p class="text-xs text-slate-500 text-center">Your driver is 1.5km away</p>
+            <button class="bg-[#ec5b13] text-white font-bold py-3 rounded-xl shadow-lg shadow-orange-100">Track
+                Driver</button>
+        </div>
+    </section>
+
+    <!-- Past Orders -->
+    <section class="m-4">
+        <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">History</h2>
+        <div class="space-y-4">
+            <!-- Delivered -->
+            <div class="p-4 rounded-2xl bg-white shadow-sm border border-slate-100 flex justify-between items-start">
+                <div class="flex-1">
+                    <div class="flex justify-between mb-1">
+                        <p class="font-bold">#GAS-7721</p>
+                        <span class="text-[10px] font-bold text-green-500">DELIVERED</span>
+                    </div>
+                    <p class="text-[10px] text-slate-400 mb-2">Oct 24, 2023</p>
+                    <p class="text-xs font-medium">9kg Refill x1</p>
+                    <p class="text-sm font-black text-[#ec5b13] mt-2">KSh 3,200</p>
+                </div>
+                <div class="ml-4 flex flex-col items-end gap-2">
+                    <button
+                        class="border border-[#ec5b13] text-[#ec5b13] text-[10px] font-bold px-4 py-2 rounded-lg">Reorder</button>
+                </div>
+            </div>
+            <!-- Delivered -->
+            <div class="p-4 rounded-2xl bg-white shadow-sm border border-slate-100 flex justify-between items-start">
+                <div class="flex-1">
+                    <div class="flex justify-between mb-1">
+                        <p class="font-bold">#GAS-7710</p>
+                        <span class="text-[10px] font-bold text-green-500">DELIVERED</span>
+                    </div>
+                    <p class="text-[10px] text-slate-400 mb-2">Oct 12, 2023</p>
+                    <p class="text-xs font-medium">9kg Refill x1</p>
+                    <p class="text-sm font-black text-[#ec5b13] mt-2">KSh 3,200</p>
+                </div>
+                <div class="ml-4 flex flex-col items-end gap-2">
+                    <button
+                        class="border border-[#ec5b13] text-[#ec5b13] text-[10px] font-bold px-4 py-2 rounded-lg">Reorder</button>
+                </div>
+            </div>
+            <!-- Cancelled -->
+            <div
+                class="p-4 rounded-2xl bg-white shadow-sm border border-slate-100 flex justify-between items-start opacity-70">
+                <div class="flex-1">
+                    <div class="flex justify-between mb-1">
+                        <p class="font-bold">#GAS-7699</p>
+                        <span class="text-[10px] font-bold text-red-400">CANCELLED</span>
+                    </div>
+                    <p class="text-[10px] text-slate-400 mb-2">Oct 05, 2023</p>
+                    <p class="text-xs font-medium">15kg Refill x1</p>
+                    <p class="text-sm font-black text-[#ec5b13] mt-2">KSh 5,400</p>
+                </div>
+                <div class="ml-4 flex flex-col items-end gap-2">
+                    <button
+                        class="border border-[#ec5b13] text-[#ec5b13] text-[10px] font-bold px-4 py-2 rounded-lg">Reorder</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Nav -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-100 p-3 flex justify-around items-center">
+        <a href="index.html" class="flex flex-col items-center text-slate-400">
+            <span class="material-symbols-outlined">home</span>
+            <span class="text-[10px] font-bold">Home</span>
+        </a>
+        <a href="orders.html" class="flex flex-col items-center active-nav">
+            <span class="material-symbols-outlined">receipt_long</span>
+            <span class="text-[10px] font-bold">Orders</span>
+        </a>
+        <a href="promos.html" class="flex flex-col items-center text-slate-400">
+            <span class="material-symbols-outlined">sell</span>
+            <span class="text-[10px] font-bold">Promos</span>
+        </a>
+        <a href="profile.html" class="flex flex-col items-center text-slate-400">
+            <span class="material-symbols-outlined">person</span>
+            <span class="text-[10px] font-bold">Profile</span>
+        </a>
+    </nav>
+</body>
+
+</html>
