@@ -67,21 +67,21 @@
                 style='background-image: url("assets/gas_shop_hero_kenyan.png"); background-size: cover; background-position: center;'>
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
-                    <h1 class="text-white text-3xl font-black leading-tight mb-2">Dannys Gas Shop</h1>
-                    <p class="text-white/90 text-sm font-medium">Fast Gas Delivery &amp; Refill Services Near You.</p>
+                    <h1 class="text-white text-3xl font-black leading-tight mb-2">Get your gas refilled in under 1 hour</h1>
+                    <p class="text-white/90 text-sm font-medium">Safe, fast doorstep delivery across Nairobi.</p>
                 </div>
             </div>
             <div class="grid grid-cols-2 gap-3">
+                <a href="#brand-selection"
+                    class="bg-primary text-white py-4 rounded-xl font-bold flex flex-col items-center gap-1 shadow-lg shadow-primary/20 text-center">
+                    <span class="material-symbols-outlined">autorenew</span>
+                    Refill Now
+                </a>
                 <a href="https://wa.me/254112208191?text=Hello%20Dannys%20Gas%20Shop,%20I%20want%20to%20order%20gas."
                     target="_blank"
-                    class="bg-primary text-white py-4 rounded-xl font-bold flex flex-col items-center gap-1 shadow-lg shadow-primary/20 text-center">
-                    <span class="material-symbols-outlined">shopping_bag</span>
-                    Order Gas
-                </a>
-                <a href="#refill-form"
-                    class="bg-white dark:bg-slate-800 text-primary border-2 border-primary/10 py-4 rounded-xl font-bold flex flex-col items-center gap-1 text-center">
-                    <span class="material-symbols-outlined text-primary">autorenew</span>
-                    Request Refill
+                    class="bg-[#25D366] text-white py-4 rounded-xl font-bold flex flex-col items-center gap-1 shadow-lg shadow-[#25D366]/20 text-center">
+                    <span class="material-symbols-outlined">chat</span>
+                    Order via WhatsApp
                 </a>
             </div>
         </section>
@@ -112,8 +112,41 @@
                 </div>
             </div>
         </section>
+        <!-- Trust & Safety -->
+        <section class="px-4 py-8 bg-white dark:bg-slate-800 border-t border-slate-100 dark:border-slate-700">
+            <h2 class="text-xl font-bold mb-6">Why Choose Us?</h2>
+            <div class="grid grid-cols-1 gap-4">
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-green-600">verified</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm">Brand-Specific Refills</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">We never mix cylinders. Only authentic refills for your specific brand.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-blue-600">scale</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm">Accurate Measurement</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Every cylinder is weighed to ensure you get exactly what you pay for.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-orange-600">security</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm">Safe Handling</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Professional installation and leak checks with every delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Brand Selection -->
-        <section class="px-4 py-4 bg-white dark:bg-slate-800 border-y border-slate-100 dark:border-slate-700">
+        <section id="brand-selection" class="px-4 py-4 bg-white dark:bg-slate-800 border-y border-slate-100 dark:border-slate-700">
             <h2 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4 px-2">Select Your Brand</h2>
             <div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar px-2">
                 <button onclick="setBrand('K-Gas')" 
@@ -171,7 +204,7 @@
         </section>
 
         <!-- Gas Accessories -->
-        <section class="px-4 py-4">
+        <section id="accessories-section" class="px-4 py-4 transition-colors duration-500">
             <h2 class="text-xl font-bold mb-4">Gas Accessories</h2>
             <div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar">
                 <div
@@ -519,6 +552,22 @@
         function orderItem(itemName, qtyId) {
             const qty = document.getElementById(qtyId).innerText;
             const message = `*Order from Dannys Gas Shop*\nBrand: ${selectedBrand}\nItem: ${itemName}\nQuantity: ${qty}\nDelivery: ${deliveryType}\n\nPlease confirm!`;
+            
+            // Accessory Upsell Logic
+            if (itemName.toLowerCase().includes('refill')) {
+                const wantsAccessories = confirm("Would you like to add accessories (Regulator, Hose, or Clips) to your order for a safer setup?");
+                if (wantsAccessories) {
+                    const accessoriesSection = document.getElementById('accessories-section');
+                    if (accessoriesSection) {
+                        accessoriesSection.scrollIntoView({ behavior: 'smooth' });
+                        // Add a temporary highlight
+                        accessoriesSection.classList.add('bg-yellow-50', 'dark:bg-yellow-900/10');
+                        setTimeout(() => accessoriesSection.classList.remove('bg-yellow-50', 'dark:bg-yellow-900/10'), 2000);
+                    }
+                    return; 
+                }
+            }
+            
             const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
             window.open(waLink, '_blank');
         }
