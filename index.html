@@ -63,7 +63,7 @@
         <!-- Hero Section -->
         <section class="px-4 py-8">
             <div class="relative w-full h-64 rounded-xl overflow-hidden mb-6 bg-slate-200 dark:bg-slate-800"
-                data-alt="Modern Kenyan gas shop with brand-specific cooking gas cylinders (K-Gas, Afrigas, ProGas, Total) neatly arranged on shelves"
+                data-alt="Modern Kenyan gas shop with brand-specific cooking gas cylinders (K-Gas, Afrigas, ProGas, Super Gas) neatly arranged on shelves"
                 style='background-image: url("assets/gas_shop_hero_kenyan.png"); background-size: cover; background-position: center;'>
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
@@ -164,10 +164,10 @@
                     <div class="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center text-white font-black">P</div>
                     <span class="text-xs font-bold">ProGas</span>
                 </button>
-                <button onclick="setBrand('Total')" 
+                <button onclick="setBrand('Super Gas')" 
                     class="brand-btn min-w-[100px] flex flex-col items-center gap-2 p-3 rounded-2xl border-2 border-transparent bg-slate-50 dark:bg-slate-900 transition-all hover:border-primary active:scale-95">
-                    <div class="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center text-white font-black">T</div>
-                    <span class="text-xs font-bold">Total</span>
+                    <div class="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center text-white font-black">S</div>
+                    <span class="text-xs font-bold">Super Gas</span>
                 </button>
             </div>
         </section>
@@ -203,128 +203,6 @@
             </div>
         </section>
 
-        <!-- Gas Accessories -->
-        <section id="accessories-section" class="px-4 py-4 transition-colors duration-500">
-            <h2 class="text-xl font-bold mb-4">Gas Accessories</h2>
-            <div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar">
-                <div
-                    class="min-w-[160px] bg-white dark:bg-slate-800 rounded-xl p-3 border border-slate-100 dark:border-slate-700 block">
-                    <div class="w-full aspect-square bg-slate-100 dark:bg-slate-700 rounded-lg mb-3"
-                        data-alt="Gas regulator for cylinders"
-                        style="background-image: url('assets/gas_regulator_1773229384347.png'); background-size: cover; background-position: center;">
-                    </div>
-                    <h3 class="font-bold text-sm">Gas Regulator</h3>
-                    <p class="text-primary text-xs font-bold mb-2">Ksh 850</p>
-                    <button type="button" onclick="orderSimple('Gas Regulator')"
-                        class="w-full bg-[#25D366] hover:bg-[#1fad53] text-white py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1">Order
-                        <span class="material-symbols-outlined text-[14px]">chat</span></button>
-                </div>
-                <div
-                    class="min-w-[160px] bg-white dark:bg-slate-800 rounded-xl p-3 border border-slate-100 dark:border-slate-700 block">
-                    <div class="w-full aspect-square bg-slate-100 dark:bg-slate-700 rounded-lg mb-3"
-                        data-alt="High-quality gas delivery hose pipe"
-                        style="background-image: url('assets/gas_hose.png'); background-size: cover; background-position: center;">
-                    </div>
-                    <h3 class="font-bold text-sm">Pipes/Hoses</h3>
-                    <p class="text-primary text-xs font-bold mb-2">Ksh 300/m</p>
-                    <button type="button" onclick="orderSimple('Pipes/Hoses')"
-                        class="w-full bg-[#25D366] hover:bg-[#1fad53] text-white py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1">Order
-                        <span class="material-symbols-outlined text-[14px]">chat</span></button>
-                </div>
-                <div
-                    class="min-w-[160px] bg-white dark:bg-slate-800 rounded-xl p-3 border border-slate-100 dark:border-slate-700 block">
-                    <div class="w-full aspect-square bg-slate-100 dark:bg-slate-700 rounded-lg mb-3"
-                        data-alt="Metal stand for gas cylinders"
-                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBEZ31thbJDonIsTunHAybXPGj4JDfmF0pPp0tgEbFbd-yZiZvVnLvoZuCdEXF3Wdk0RyV6BncZZDhyoBZOkO2n5zdWzEsfORWE-gz2cGj81SFUwuOvkdNL9gW44IOMHUY-U_XKQQaP6gdpqnVrEMtvFOc0jzpk1J_mMiZ00Pw9VnQQisksMNHFhfigbDaJYF9hxdPebYR6dUWeiBYYssQqTZ_c-7_IvcNtG_ESTToYH5o2lybQJJjFMihHwQ95d5A3tcBw-6NvsOw"); background-size: cover; background-position: center;'>
-                    </div>
-                    <h3 class="font-bold text-sm">Cylinder Stand</h3>
-                    <p class="text-primary text-xs font-bold mb-2">Ksh 1,500</p>
-                    <button type="button" onclick="orderSimple('Cylinder Stand')"
-                        class="w-full bg-[#25D366] hover:bg-[#1fad53] text-white py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1">Order
-                        <span class="material-symbols-outlined text-[14px]">chat</span></button>
-                </div>
-                <div
-                    class="min-w-[160px] bg-white dark:bg-slate-800 rounded-xl p-3 border border-slate-100 dark:border-slate-700 block">
-                    <div class="w-full aspect-square bg-slate-100 dark:bg-slate-700 rounded-lg mb-3"
-                        data-alt="Modern adjustable metal hose clips"
-                        style='background-image: url("assets/hose_clips.png"); background-size: cover; background-position: center;'>
-                    </div>
-                    <h3 class="font-bold text-sm">Hose Clips</h3>
-                    <p class="text-primary text-xs font-bold mb-2">Ksh 100</p>
-                    <button type="button" onclick="orderSimple('Hose Clips')"
-                        class="w-full bg-[#25D366] hover:bg-[#1fad53] text-white py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1">Order
-                        <span class="material-symbols-outlined text-[14px]">chat</span></button>
-                </div>
-                <div
-                    class="min-w-[160px] bg-white dark:bg-slate-800 rounded-xl p-3 border border-slate-100 dark:border-slate-700 block">
-                    <div class="w-full aspect-square bg-slate-100 dark:bg-slate-700 rounded-lg mb-3"
-                        data-alt="Modern electronic gas lighter"
-                        style='background-image: url("assets/gas_lighter.png"); background-size: cover; background-position: center;'>
-                    </div>
-                    <h3 class="font-bold text-sm">Gas Lighter</h3>
-                    <p class="text-primary text-xs font-bold mb-2">Ksh 150</p>
-                    <button type="button" onclick="orderSimple('Gas Lighter / Igniter')"
-                        class="w-full bg-[#25D366] hover:bg-[#1fad53] text-white py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1">Order
-                        <span class="material-symbols-outlined text-[14px]">chat</span></button>
-                </div>
-                <div
-                    class="min-w-[160px] bg-white dark:bg-slate-800 rounded-xl p-3 border border-slate-100 dark:border-slate-700 block">
-                    <div class="w-full aspect-square bg-slate-100 dark:bg-slate-700 rounded-lg mb-3"
-                        data-alt="Sturdy gas cylinder trolley"
-                        style='background-image: url("assets/cylinder_trolley.png"); background-size: cover; background-position: center;'>
-                    </div>
-                    <h3 class="font-bold text-sm">Cylinder Trolley</h3>
-                    <p class="text-primary text-xs font-bold mb-2">Ksh 2,500</p>
-                    <button type="button" onclick="orderSimple('Cylinder Trolley')"
-                        class="w-full bg-[#25D366] hover:bg-[#1fad53] text-white py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1">Order
-                        <span class="material-symbols-outlined text-[14px]">chat</span></button>
-                </div>
-                <div
-                    class="min-w-[160px] bg-white dark:bg-slate-800 rounded-xl p-3 border border-slate-100 dark:border-slate-700 block">
-                    <div class="w-full aspect-square bg-slate-100 dark:bg-slate-700 rounded-lg mb-3"
-                        data-alt="Modern kitchen gas stove"
-                        style='background-image: url("assets/gas_stove.png"); background-size: cover; background-position: center;'>
-                    </div>
-                    <h3 class="font-bold text-sm">Gas Stove</h3>
-                    <p class="text-primary text-xs font-bold mb-2">Ksh 3,000</p>
-                    <button type="button" onclick="orderSimple('Gas Stove')"
-                        class="w-full bg-[#25D366] hover:bg-[#1fad53] text-white py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1">Order
-                        <span class="material-symbols-outlined text-[14px]">chat</span></button>
-                </div>
-            </div>
-        </section>
-        <!-- Gas Cookers -->
-        <section class="px-4 py-4">
-            <h2 class="text-xl font-bold mb-4">Gas Cookers</h2>
-            <div class="grid grid-cols-2 gap-4">
-                <div
-                    class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 flex flex-col">
-                    <div class="w-full flex-1 min-h-[128px] bg-slate-100" data-alt="Single burner tabletop gas cooker"
-                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7rWMuji7JE4NJT6a4HZHhmalxbYP8UqJY_DG8YxAWPE79jPMv2sKOVavR0fvLzsxyEyfB2zXcZbO8kT8jhPkk9wtLR6_FyWxxVI25N33svIbM6TGoofLIJslwi4uLNg4JVHr65N1NOVLW92ULRxntGQB2KFuvoPmi9owvp8NOwc9MdY08M8Yp03b06KMtCCo7WsLpfYYTkAEtSrsw1rSGrNjSfvJLVP-_5tqJ05cE0Bwyw2g6SYmSq3y9pObtAZ6ynrMsiiT-8KI"); background-size: cover; background-position: center;'>
-                    </div>
-                    <div class="p-3">
-                        <h3 class="font-bold text-sm truncate">Single Burner</h3>
-                        <p class="text-primary font-bold text-sm mb-2">Ksh 1,800</p>
-                        <button type="button" onclick="orderSimple('Single Burner')"
-                            class="w-full bg-[#25D366] hover:bg-[#1fad53] text-white py-1.5 rounded-lg text-xs font-bold flex items-center justify-center gap-1">Order
-                            <span class="material-symbols-outlined text-[14px]">chat</span></button>
-                    </div>
-                </div>
-                <div
-                    class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 flex flex-col">
-                    <div class="w-full flex-1 min-h-[128px] bg-slate-100" data-alt="Double burner tabletop gas cooker"
-                        style='background-image: url("assets/gas_stove.png"); background-size: cover; background-position: center;'>
-                    </div>
-                    <div class="p-3">
-                        <h3 class="font-bold text-sm truncate">Double Burner</h3>
-                        <p class="text-primary font-bold text-sm mb-2">Ksh 3,500</p>
-                        <button type="button" onclick="orderSimple('Double Burner')"
-                            class="w-full bg-[#25D366] hover:bg-[#1fad53] text-white py-1.5 rounded-lg text-xs font-bold flex items-center justify-center gap-1">Order
-                            <span class="material-symbols-outlined text-[14px]">chat</span></button>
-                    </div>
-                </div>
-            </div>
-        </section>
         <!-- Refill Form -->
         <section id="refill-form" class="px-4 py-8">
             <div
@@ -472,13 +350,13 @@
                     { name: "New ProGas 6kg Cylinder", price: "5,800", id: "new-6kg", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUKWk7ht1XWr0ce8aUti8Co5VFzrSuC7VOTvSqDo54qGX2udHAdTq0sWdukGEsh7KIsFqeq8YvvPjat_k0UfL9CcsUMSot09bj2Bun3iVJC-uVpaSErNPOvnmfwIdJ-bs-sPyN9UBhpiU3su-jyQ9QczhYTmmFKpRay-GlHUv1kjKMSaxi0XNU1-rvWPMbqTqK0KzIMkgJ5PXaEX8DG4gPW2aut0LxUTwBZ7tqBjBpKoWTUi5X9qbzMjzIAqp07ayPaxxqvf8MhYU" }
                 ]
             },
-            "Total": {
+            "Super Gas": {
                 refills: [
-                    { name: "Total 6kg Refill", price: "1,300", id: "refill-6kg", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUKWk7ht1XWr0ce8aUti8Co5VFzrSuC7VOTvSqDo54qGX2udHAdTq0sWdukGEsh7KIsFqeq8YvvPjat_k0UfL9CcsUMSot09bj2Bun3iVJC-uVpaSErNPOvnmfwIdJ-bs-sPyN9UBhpiU3su-jyQ9QczhYTmmFKpRay-GlHUv1kjKMSaxi0XNU1-rvWPMbqTqK0KzIMkgJ5PXaEX8DG4gPW2aut0LxUTwBZ7tqBjBpKoWTUi5X9qbzMjzIAqp07ayPaxxqvf8MhYU" },
-                    { name: "Total 13kg Refill", price: "2,700", id: "refill-13kg", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuA7d7G6kxEK2Sg0F3TX2wsE_ZNE8GB4TevU76yLDgZyysQFGCx62qlZ_kIJHshbL-MASaoIlvFbd05r5kLjZbaTu1QJdBxWUDu_OQJuEeHFS_7vtaylNdkOlcSX0kcuMfWWln5CgaX_v02g3Epb5TQFGBBapyVRHAOqdS58yLNVrTjj5fQ4Y0TLxsILQF3VDvKTfxj_5uA8A6-kDABEqUTZ78RX63t-wp0y6Dsxo8brDB6bSK0nFQhQTZeRdtRo9gCdzMeRFctgwCM" }
+                    { name: "Super Gas 6kg Refill", price: "1,300", id: "refill-6kg", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUKWk7ht1XWr0ce8aUti8Co5VFzrSuC7VOTvSqDo54qGX2udHAdTq0sWdukGEsh7KIsFqeq8YvvPjat_k0UfL9CcsUMSot09bj2Bun3iVJC-uVpaSErNPOvnmfwIdJ-bs-sPyN9UBhpiU3su-jyQ9QczhYTmmFKpRay-GlHUv1kjKMSaxi0XNU1-rvWPMbqTqK0KzIMkgJ5PXaEX8DG4gPW2aut0LxUTwBZ7tqBjBpKoWTUi5X9qbzMjzIAqp07ayPaxxqvf8MhYU" },
+                    { name: "Super Gas 13kg Refill", price: "2,700", id: "refill-13kg", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuA7d7G6kxEK2Sg0F3TX2wsE_ZNE8GB4TevU76yLDgZyysQFGCx62qlZ_kIJHshbL-MASaoIlvFbd05r5kLjZbaTu1QJdBxWUDu_OQJuEeHFS_7vtaylNdkOlcSX0kcuMfWWln5CgaX_v02g3Epb5TQFGBBapyVRHAOqdS58yLNVrTjj5fQ4Y0TLxsILQF3VDvKTfxj_5uA8A6-kDABEqUTZ78RX63t-wp0y6Dsxo8brDB6bSK0nFQhQTZeRdtRo9gCdzMeRFctgwCM" }
                 ],
                 newPurchases: [
-                    { name: "New Total 6kg Cylinder", price: "6,000", id: "new-6kg", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUKWk7ht1XWr0ce8aUti8Co5VFzrSuC7VOTvSqDo54qGX2udHAdTq0sWdukGEsh7KIsFqeq8YvvPjat_k0UfL9CcsUMSot09bj2Bun3iVJC-uVpaSErNPOvnmfwIdJ-bs-sPyN9UBhpiU3su-jyQ9QczhYTmmFKpRay-GlHUv1kjKMSaxi0XNU1-rvWPMbqTqK0KzIMkgJ5PXaEX8DG4gPW2aut0LxUTwBZ7tqBjBpKoWTUi5X9qbzMjzIAqp07ayPaxxqvf8MhYU" }
+                    { name: "New Super Gas 6kg Cylinder", price: "6,000", id: "new-6kg", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUKWk7ht1XWr0ce8aUti8Co5VFzrSuC7VOTvSqDo54qGX2udHAdTq0sWdukGEsh7KIsFqeq8YvvPjat_k0UfL9CcsUMSot09bj2Bun3iVJC-uVpaSErNPOvnmfwIdJ-bs-sPyN9UBhpiU3su-jyQ9QczhYTmmFKpRay-GlHUv1kjKMSaxi0XNU1-rvWPMbqTqK0KzIMkgJ5PXaEX8DG4gPW2aut0LxUTwBZ7tqBjBpKoWTUi5X9qbzMjzIAqp07ayPaxxqvf8MhYU" }
                 ]
             }
         };
@@ -553,30 +431,11 @@
             const qty = document.getElementById(qtyId).innerText;
             const message = `*Order from Dannys Gas Shop*\nBrand: ${selectedBrand}\nItem: ${itemName}\nQuantity: ${qty}\nDelivery: ${deliveryType}\n\nPlease confirm!`;
             
-            // Accessory Upsell Logic
-            if (itemName.toLowerCase().includes('refill')) {
-                const wantsAccessories = confirm("Would you like to add accessories (Regulator, Hose, or Clips) to your order for a safer setup?");
-                if (wantsAccessories) {
-                    const accessoriesSection = document.getElementById('accessories-section');
-                    if (accessoriesSection) {
-                        accessoriesSection.scrollIntoView({ behavior: 'smooth' });
-                        // Add a temporary highlight
-                        accessoriesSection.classList.add('bg-yellow-50', 'dark:bg-yellow-900/10');
-                        setTimeout(() => accessoriesSection.classList.remove('bg-yellow-50', 'dark:bg-yellow-900/10'), 2000);
-                    }
-                    return; 
-                }
-            }
             
             const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
             window.open(waLink, '_blank');
         }
 
-        function orderSimple(itemName) {
-            const message = `Hello Dannys Gas Shop, I want to order a ${itemName}.`;
-            const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
-            window.open(waLink, '_blank');
-        }
 
         function submitRefill(event) {
             event.preventDefault();
