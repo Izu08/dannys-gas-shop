@@ -260,12 +260,33 @@
                         <p class="font-bold">+254 714 999 221</p>
                     </div>
                 </a>
-                <div class="w-full h-48 rounded-2xl bg-slate-200 dark:bg-slate-800 overflow-hidden relative border border-slate-100 dark:border-slate-700"
-                    data-location="Nairobi, Kenya">
-                    <div class="absolute inset-0 flex items-center justify-center bg-slate-300 dark:bg-slate-700/50">
-                        <span class="material-symbols-outlined text-4xl text-slate-400">map</span>
-                        <span class="ml-2 font-medium text-slate-500">View Map Location</span>
+                
+                <div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
+                    <div class="flex items-start gap-3 mb-4">
+                        <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500 uppercase font-bold">Our Location</p>
+                            <p class="font-bold text-sm leading-tight">Lavington Othaya Rd, Nairobi</p>
+                            <p class="text-[10px] text-slate-400">Next to Valley Arcade Area</p>
+                        </div>
                     </div>
+                    <div class="w-full h-64 rounded-xl bg-slate-200 dark:bg-slate-800 overflow-hidden relative border border-slate-100 dark:border-slate-700">
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0" 
+                            loading="lazy" 
+                            allowfullscreen 
+                            src="https://maps.google.com/maps?q=Othaya%20Rd%2C%20Lavington%2C%20Nairobi&t=&z=15&ie=UTF8&iwloc=&output=embed">
+                        </iframe>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Othaya+Rd,+Lavington,+Nairobi" target="_blank"
+                        class="mt-4 flex items-center justify-center gap-2 w-full bg-primary text-white py-3 rounded-xl font-bold text-sm hover:opacity-90 transition-opacity">
+                        <span class="material-symbols-outlined text-sm">directions</span>
+                        Open in Google Maps
+                    </a>
                 </div>
             </div>
         </section>
@@ -274,6 +295,7 @@
             class="bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 py-10 px-4 text-center text-slate-500 shadow-inner">
             <div class="mb-6 space-y-2 text-sm">
                 <h3 class="text-xl font-black text-slate-900 dark:text-slate-100 mb-2">Dannys Gas Shop</h3>
+                <p>Lavington Othaya Rd, Nairobi</p>
                 <p>Delivery Hours: Mon-Sun, 6 AM - 10 PM</p>
                 <p>Contact: +254 714 999 221</p>
             </div>
