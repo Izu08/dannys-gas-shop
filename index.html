@@ -48,8 +48,8 @@
     <header
         class="sticky top-0 z-40 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
         <div class="flex items-center justify-between px-4 py-3 max-w-md mx-auto">
-            <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-3xl">local_gas_station</span>
+            <div class="flex items-center gap-3">
+                <img src="/public/images/gas-cylinder-1.png" alt="Danny's Gas Shop Logo" class="w-10 h-10 object-contain">
                 <h1 class="text-xl font-black tracking-tight">Dannys Gas Shop</h1>
             </div>
             <button id="theme-toggle"
@@ -62,11 +62,12 @@
     <main class="max-w-md mx-auto overflow-x-hidden">
         <!-- Hero Section -->
         <section class="px-4 py-8">
-            <div class="relative w-full h-64 rounded-xl overflow-hidden mb-6 bg-slate-200 dark:bg-slate-800"
+            <div class="relative w-full h-72 rounded-xl overflow-hidden mb-6 bg-slate-200 dark:bg-slate-800"
                 data-alt="Modern Kenyan gas shop with brand-specific cooking gas cylinders (K-Gas, Afrigas, ProGas, Super Gas) neatly arranged on shelves"
-                style='background-image: url("assets/gas_shop_hero_kenyan.png"); background-size: cover; background-position: center;'>
+                style='background-image: url("/public/images/gas-shop-hero.png"); background-size: cover; background-position: center;'>
                 <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
+                    class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
+                    <img src="/public/images/gas-cylinder-1.png" alt="Branding" class="w-16 h-16 object-contain mb-3 drop-shadow-lg">
                     <h1 class="text-white text-3xl font-black leading-tight mb-2">Get your gas refilled in under 1 hour</h1>
                     <p class="text-white/90 text-sm font-medium">Safe, fast doorstep delivery across Nairobi.</p>
                 </div>
@@ -151,22 +152,30 @@
             <div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar px-2">
                 <button onclick="setBrand('K-Gas')" 
                     class="brand-btn min-w-[100px] flex flex-col items-center gap-2 p-3 rounded-2xl border-2 border-transparent bg-slate-50 dark:bg-slate-900 transition-all hover:border-primary active:scale-95">
-                    <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-black">K</div>
+                    <div class="w-14 h-14 rounded-full bg-white dark:bg-slate-800 p-1 flex items-center justify-center overflow-hidden border border-slate-100 dark:border-slate-700">
+                        <img src="/public/images/gas-cylinder-1.png" alt="K-Gas" class="w-full h-full object-contain">
+                    </div>
                     <span class="text-xs font-bold">K-Gas</span>
                 </button>
                 <button onclick="setBrand('Afrigas')" 
                     class="brand-btn min-w-[100px] flex flex-col items-center gap-2 p-3 rounded-2xl border-2 border-transparent bg-slate-50 dark:bg-slate-900 transition-all hover:border-primary active:scale-95">
-                    <div class="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center text-white font-black">A</div>
+                    <div class="w-14 h-14 rounded-full bg-white dark:bg-slate-800 p-1 flex items-center justify-center overflow-hidden border border-slate-100 dark:border-slate-700">
+                        <img src="/public/images/gas-cylinder-2.png" alt="Afrigas" class="w-full h-full object-contain">
+                    </div>
                     <span class="text-xs font-bold">Afrigas</span>
                 </button>
                 <button onclick="setBrand('ProGas')" 
                     class="brand-btn min-w-[100px] flex flex-col items-center gap-2 p-3 rounded-2xl border-2 border-transparent bg-slate-50 dark:bg-slate-900 transition-all hover:border-primary active:scale-95">
-                    <div class="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center text-white font-black">P</div>
+                    <div class="w-14 h-14 rounded-full bg-white dark:bg-slate-800 p-1 flex items-center justify-center overflow-hidden border border-slate-100 dark:border-slate-700">
+                        <img src="/public/images/gas-cylinder-3.png" alt="ProGas" class="w-full h-full object-contain">
+                    </div>
                     <span class="text-xs font-bold">ProGas</span>
                 </button>
                 <button onclick="setBrand('Super Gas')" 
                     class="brand-btn min-w-[100px] flex flex-col items-center gap-2 p-3 rounded-2xl border-2 border-transparent bg-slate-50 dark:bg-slate-900 transition-all hover:border-primary active:scale-95">
-                    <div class="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center text-white font-black">S</div>
+                    <div class="w-14 h-14 rounded-full bg-white dark:bg-slate-800 p-1 flex items-center justify-center overflow-hidden border border-slate-100 dark:border-slate-700">
+                        <img src="/public/images/gas-cylinder-4.png" alt="Super Gas" class="w-full h-full object-contain">
+                    </div>
                     <span class="text-xs font-bold">Super Gas</span>
                 </button>
             </div>
@@ -347,38 +356,38 @@
         const products = {
             "K-Gas": {
                 refills: [
-                    { name: "K-Gas 6kg Refill", price: "1,200", id: "refill-6kg", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUKWk7ht1XWr0ce8aUti8Co5VFzrSuC7VOTvSqDo54qGX2udHAdTq0sWdukGEsh7KIsFqeq8YvvPjat_k0UfL9CcsUMSot09bj2Bun3iVJC-uVpaSErNPOvnmfwIdJ-bs-sPyN9UBhpiU3su-jyQ9QczhYTmmFKpRay-GlHUv1kjKMSaxi0XNU1-rvWPMbqTqK0KzIMkgJ5PXaEX8DG4gPW2aut0LxUTwBZ7tqBjBpKoWTUi5X9qbzMjzIAqp07ayPaxxqvf8MhYU" },
-                    { name: "K-Gas 13kg Refill", price: "2,500", id: "refill-13kg", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuA7d7G6kxEK2Sg0F3TX2wsE_ZNE8GB4TevU76yLDgZyysQFGCx62qlZ_kIJHshbL-MASaoIlvFbd05r5kLjZbaTu1QJdBxWUDu_OQJuEeHFS_7vtaylNdkOlcSX0kcuMfWWln5CgaX_v02g3Epb5TQFGBBapyVRHAOqdS58yLNVrTjj5fQ4Y0TLxsILQF3VDvKTfxj_5uA8A6-kDABEqUTZ78RX63t-wp0y6Dsxo8brDB6bSK0nFQhQTZeRdtRo9gCdzMeRFctgwCM" }
+                    { name: "K-Gas 6kg Refill", price: "1,200", id: "refill-6kg", img: "/public/images/gas-cylinder-1.png" },
+                    { name: "K-Gas 13kg Refill", price: "2,500", id: "refill-13kg", img: "/public/images/gas-cylinder-1.png" }
                 ],
                 newPurchases: [
-                    { name: "New K-Gas 6kg Cylinder", price: "5,500", id: "new-6kg", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUKWk7ht1XWr0ce8aUti8Co5VFzrSuC7VOTvSqDo54qGX2udHAdTq0sWdukGEsh7KIsFqeq8YvvPjat_k0UfL9CcsUMSot09bj2Bun3iVJC-uVpaSErNPOvnmfwIdJ-bs-sPyN9UBhpiU3su-jyQ9QczhYTmmFKpRay-GlHUv1kjKMSaxi0XNU1-rvWPMbqTqK0KzIMkgJ5PXaEX8DG4gPW2aut0LxUTwBZ7tqBjBpKoWTUi5X9qbzMjzIAqp07ayPaxxqvf8MhYU" }
+                    { name: "New K-Gas 6kg Cylinder", price: "5,500", id: "new-6kg", img: "/public/images/gas-cylinder-1.png" }
                 ]
             },
             "Afrigas": {
                 refills: [
-                    { name: "Afrigas 6kg Refill", price: "1,250", id: "refill-6kg", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUKWk7ht1XWr0ce8aUti8Co5VFzrSuC7VOTvSqDo54qGX2udHAdTq0sWdukGEsh7KIsFqeq8YvvPjat_k0UfL9CcsUMSot09bj2Bun3iVJC-uVpaSErNPOvnmfwIdJ-bs-sPyN9UBhpiU3su-jyQ9QczhYTmmFKpRay-GlHUv1kjKMSaxi0XNU1-rvWPMbqTqK0KzIMkgJ5PXaEX8DG4gPW2aut0LxUTwBZ7tqBjBpKoWTUi5X9qbzMjzIAqp07ayPaxxqvf8MhYU" },
-                    { name: "Afrigas 13kg Refill", price: "2,600", id: "refill-13kg", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuA7d7G6kxEK2Sg0F3TX2wsE_ZNE8GB4TevU76yLDgZyysQFGCx62qlZ_kIJHshbL-MASaoIlvFbd05r5kLjZbaTu1QJdBxWUDu_OQJuEeHFS_7vtaylNdkOlcSX0kcuMfWWln5CgaX_v02g3Epb5TQFGBBapyVRHAOqdS58yLNVrTjj5fQ4Y0TLxsILQF3VDvKTfxj_5uA8A6-kDABEqUTZ78RX63t-wp0y6Dsxo8brDB6bSK0nFQhQTZeRdtRo9gCdzMeRFctgwCM" }
+                    { name: "Afrigas 6kg Refill", price: "1,250", id: "refill-6kg", img: "/public/images/gas-cylinder-2.png" },
+                    { name: "Afrigas 13kg Refill", price: "2,600", id: "refill-13kg", img: "/public/images/gas-cylinder-2.png" }
                 ],
                 newPurchases: [
-                    { name: "New Afrigas 13kg Cylinder", price: "8,500", id: "new-13kg", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuA7d7G6kxEK2Sg0F3TX2wsE_ZNE8GB4TevU76yLDgZyysQFGCx62qlZ_kIJHshbL-MASaoIlvFbd05r5kLjZbaTu1QJdBxWUDu_OQJuEeHFS_7vtaylNdkOlcSX0kcuMfWWln5CgaX_v02g3Epb5TQFGBBapyVRHAOqdS58yLNVrTjj5fQ4Y0TLxsILQF3VDvKTfxj_5uA8A6-kDABEqUTZ78RX63t-wp0y6Dsxo8brDB6bSK0nFQhQTZeRdtRo9gCdzMeRFctgwCM" }
+                    { name: "New Afrigas 13kg Cylinder", price: "8,500", id: "new-13kg", img: "/public/images/gas-cylinder-2.png" }
                 ]
             },
             "ProGas": {
                 refills: [
-                    { name: "ProGas 6kg Refill", price: "1,200", id: "refill-6kg", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUKWk7ht1XWr0ce8aUti8Co5VFzrSuC7VOTvSqDo54qGX2udHAdTq0sWdukGEsh7KIsFqeq8YvvPjat_k0UfL9CcsUMSot09bj2Bun3iVJC-uVpaSErNPOvnmfwIdJ-bs-sPyN9UBhpiU3su-jyQ9QczhYTmmFKpRay-GlHUv1kjKMSaxi0XNU1-rvWPMbqTqK0KzIMkgJ5PXaEX8DG4gPW2aut0LxUTwBZ7tqBjBpKoWTUi5X9qbzMjzIAqp07ayPaxxqvf8MhYU" },
-                    { name: "ProGas 13kg Refill", price: "2,550", id: "refill-13kg", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuA7d7G6kxEK2Sg0F3TX2wsE_ZNE8GB4TevU76yLDgZyysQFGCx62qlZ_kIJHshbL-MASaoIlvFbd05r5kLjZbaTu1QJdBxWUDu_OQJuEeHFS_7vtaylNdkOlcSX0kcuMfWWln5CgaX_v02g3Epb5TQFGBBapyVRHAOqdS58yLNVrTjj5fQ4Y0TLxsILQF3VDvKTfxj_5uA8A6-kDABEqUTZ78RX63t-wp0y6Dsxo8brDB6bSK0nFQhQTZeRdtRo9gCdzMeRFctgwCM" }
+                    { name: "ProGas 6kg Refill", price: "1,200", id: "refill-6kg", img: "/public/images/gas-cylinder-3.png" },
+                    { name: "ProGas 13kg Refill", price: "2,550", id: "refill-13kg", img: "/public/images/gas-cylinder-3.png" }
                 ],
                 newPurchases: [
-                    { name: "New ProGas 6kg Cylinder", price: "5,800", id: "new-6kg", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUKWk7ht1XWr0ce8aUti8Co5VFzrSuC7VOTvSqDo54qGX2udHAdTq0sWdukGEsh7KIsFqeq8YvvPjat_k0UfL9CcsUMSot09bj2Bun3iVJC-uVpaSErNPOvnmfwIdJ-bs-sPyN9UBhpiU3su-jyQ9QczhYTmmFKpRay-GlHUv1kjKMSaxi0XNU1-rvWPMbqTqK0KzIMkgJ5PXaEX8DG4gPW2aut0LxUTwBZ7tqBjBpKoWTUi5X9qbzMjzIAqp07ayPaxxqvf8MhYU" }
+                    { name: "New ProGas 6kg Cylinder", price: "5,800", id: "new-6kg", img: "/public/images/gas-cylinder-3.png" }
                 ]
             },
             "Super Gas": {
                 refills: [
-                    { name: "Super Gas 6kg Refill", price: "1,300", id: "refill-6kg", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUKWk7ht1XWr0ce8aUti8Co5VFzrSuC7VOTvSqDo54qGX2udHAdTq0sWdukGEsh7KIsFqeq8YvvPjat_k0UfL9CcsUMSot09bj2Bun3iVJC-uVpaSErNPOvnmfwIdJ-bs-sPyN9UBhpiU3su-jyQ9QczhYTmmFKpRay-GlHUv1kjKMSaxi0XNU1-rvWPMbqTqK0KzIMkgJ5PXaEX8DG4gPW2aut0LxUTwBZ7tqBjBpKoWTUi5X9qbzMjzIAqp07ayPaxxqvf8MhYU" },
-                    { name: "Super Gas 13kg Refill", price: "2,700", id: "refill-13kg", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuA7d7G6kxEK2Sg0F3TX2wsE_ZNE8GB4TevU76yLDgZyysQFGCx62qlZ_kIJHshbL-MASaoIlvFbd05r5kLjZbaTu1QJdBxWUDu_OQJuEeHFS_7vtaylNdkOlcSX0kcuMfWWln5CgaX_v02g3Epb5TQFGBBapyVRHAOqdS58yLNVrTjj5fQ4Y0TLxsILQF3VDvKTfxj_5uA8A6-kDABEqUTZ78RX63t-wp0y6Dsxo8brDB6bSK0nFQhQTZeRdtRo9gCdzMeRFctgwCM" }
+                    { name: "Super Gas 6kg Refill", price: "1,300", id: "refill-6kg", img: "/public/images/gas-cylinder-4.png" },
+                    { name: "Super Gas 13kg Refill", price: "2,700", id: "refill-13kg", img: "/public/images/gas-cylinder-4.png" }
                 ],
                 newPurchases: [
-                    { name: "New Super Gas 6kg Cylinder", price: "6,000", id: "new-6kg", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUKWk7ht1XWr0ce8aUti8Co5VFzrSuC7VOTvSqDo54qGX2udHAdTq0sWdukGEsh7KIsFqeq8YvvPjat_k0UfL9CcsUMSot09bj2Bun3iVJC-uVpaSErNPOvnmfwIdJ-bs-sPyN9UBhpiU3su-jyQ9QczhYTmmFKpRay-GlHUv1kjKMSaxi0XNU1-rvWPMbqTqK0KzIMkgJ5PXaEX8DG4gPW2aut0LxUTwBZ7tqBjBpKoWTUi5X9qbzMjzIAqp07ayPaxxqvf8MhYU" }
+                    { name: "New Super Gas 6kg Cylinder", price: "6,000", id: "new-6kg", img: "/public/images/gas-cylinder-4.png" }
                 ]
             }
         };
